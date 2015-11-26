@@ -10,8 +10,9 @@ echo "Updates were installed, do not forget to run "apt-get dist-upgrade" and re
 echo ""
 echo ""
 echo ""
-echo "preparing the github folder to download more tools"
-cd ~
-mkdir github
-cd github/
 apt-get install gedit
+apt-get install git gcc make libpcap-dev
+git clone https://github.com/robertdavidgraham/masscan.git /opt/masscan
+cd /opt/masscan
+make
+make install
