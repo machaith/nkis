@@ -13,6 +13,18 @@ echo "Updates were installed, do not forget to run "apt-get dist-upgrade" and re
 echo ""
 echo ""
 echo ""
+echo "Checking if installed as a virtual and if Vmware_tools or VirtualBox-additions is needed"
+v1 = "VirtualBox"
+v2 = "VMware Virtual Platform"
+ver = `dmidecode -s system-product-name`
+if [ "$ver" == "$v1"]
+apt-get update && apt-get install -y linux-headers-$(uname -r)
+read -p "Choose the install VirtualBox/Vmware tools  from the menu then press enter"
+cp /media/cdrom/VBoxLinuxAdditions.run /root/
+chmod 755 /root/VBoxLinuxAdditions.run
+cd /root
+./VBoxLinuxAdditions.run
+cd
 echo "installing gedit"
 apt-get install gedit
 echo "Configuring postgresql database to autostart on boot"
