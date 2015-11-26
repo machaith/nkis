@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo "*************************************************************"
 echo "Created by machaith"
@@ -26,9 +26,18 @@ chmod 755 /root/VBoxLinuxAdditions.run
 cd /root
 ./VBoxLinuxAdditions.run
 elif [ "$ver" == "$v2" ];then
-echo "vmware"
+cd ~
+apt-get install git gcc make linux-headers-$(uname -r)
+mkdir /root/vmware-tools
+cp -r /media/cdrom/* /root/vmware-tools/
+cd /root/vmware-tools/
+tar -xzf *tar.gz
+cd vmware-tools-distrib
+./vmware-install.pl
 else
 echo "No virtualization detected"
+fi
+cd
 echo "installing gedit"
 apt-get install gedit
 echo "Configuring postgresql database to autostart on boot"
@@ -48,4 +57,3 @@ cd /opt/masscan
 make
 make install
 echo "Do not forget to change the hostname using "gedit /etc/hostname""
-                                                                                                                                    1,1           Top
