@@ -1,7 +1,15 @@
 #!/usr/bin/env bash
 
-cd
 clear
+echo "*************************************************************"
+echo "Created by machaith"
+echo "https://github.com/machaith"
+echo "thanks to Peter Kim (Cheetz) https://github.com/cheetz/"
+echo "as I used his setup instructions and his great book The Hacker play Book 2"
+echo "as the main guide"
+echo "updating your machine"
+echo "*************************************************************"
+apt-get update && apt-get dist-upgrade
 echo "*************************************************************"
 echo "The tools that will be installed"
 echo "*************************************************************"
@@ -40,7 +48,7 @@ echo -e "\e[31mPhishing"
 echo "*************************************************************"
 echo -e "\e[0m"
 read -p "Press Enter to start installing the tools"
-
+cd
 echo -e "\e[31minstalling gedit"
 echo -e "\e[0m"
 apt-get install gedit
