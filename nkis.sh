@@ -9,8 +9,7 @@ echo "as I used his setup instructions and his great book The Hacker play Book 2
 echo "as the main guide"
 echo "updating your machine"
 echo "*************************************************************"
-apt-get update && apt-get upgrade
-echo "Updates were installed, do not forget to run "apt-get dist-upgrade" and reboot"
+apt-get update && apt-get dist-upgrade
 echo ""
 echo ""
 echo ""
