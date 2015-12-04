@@ -10,11 +10,32 @@ echo -e "\e[31mHTTPScreenShot"
 echo -e "\e[31mSMBExec"
 echo -e "\e[31mGitrob"
 echo -e "\e[31mCMSmap"
-echo -e "\e[31m"
-echo -e "\e[31m"
-echo -e "\e[31m"
-echo -e "\e[31m"
-
+echo -e "\e[31mWPScan"
+echo -e "\e[31mEyewitness"
+echo -e "\e[31mPrinter Exploits"
+echo -e "\e[31mSQLMap"
+echo -e "\e[31mRecon-ng"
+echo -e "\e[31mDiscover Scripts"
+echo -e "\e[31mBeEF Exploitation Framework"
+echo -e "\e[31mResponder"
+echo -e "\e[31mThe Hacker Playbook 2 - Custom Scripts"
+echo -e "\e[31mPowerSploit"
+echo -e "\e[31mPowerTools"
+echo -e "\e[31mnishang"
+echo -e "\e[31mDSHashes"
+echo -e "\e[31mSPARTA"
+echo -e "\e[31mNoSQLMap"
+echo -e "\e[31mSpiderfoot"
+echo -e "\e[31mWCE"
+echo -e "\e[31mMimikatz"
+echo -e "\e[31mSET"
+echo -e "\e[31mVeil-Framework"
+echo -e "\e[31mFuzzing Lists (SecLists)"
+echo -e "\e[31mNet-Creds Network Parsing "
+echo -e "\e[31mWifite"
+echo -e "\e[31mWIFIPhisher"
+echo -e "\e[31mPhishing"
+echo "*************************************************************"
 
 echo -e "\e[31minstalling gedit"
 apt-get install geditins
@@ -88,3 +109,140 @@ xterm -e 'su postgres'
 echo "Done, continuing"
 cd /opt/gitrob/bin
 gem install gitrob
+echo "*************************************************************"
+echo -e "\e[31mInstalling CMSmap"
+echo -e "\e[32mCMSmap is a python open source CMS (Content Management System) scanner that automates the process of detecting security flaws"
+git clone https://github.com/Dionach/CMSmap /opt/CMSmap
+echo "*************************************************************"
+echo -e "\e[31mInstalling WPScan"
+echo -e "\e[32mWordPress vulnerability scanner and brute-force tool"
+git clone https://github.com/wpscanteam/wpscan.git /opt/wpscan
+cd /opt/wpscan && ./wpscan.rb --update
+echo "*************************************************************"
+echo -e "\e[31mInstalling Eyewitness"
+echo -e "\e[32mEyeWitness is designed to take screenshots of websites, provide some server header info, and identify default credentials if possible."
+git clone https://github.com/ChrisTruncer/EyeWitness.git /opt/EyeWitness
+echo "*************************************************************"
+echo -e "\e[31mInstalling Printer Exploits"
+echo -e "\e[31mContains a number of commonly found printer exploits"
+git clone https://github.com/MooseDojo/praedasploit /opt/praedasploit
+echo "*************************************************************"
+echo -e "\e[31mInstalling SQLMap"
+echo -e "\e[31mSQL Injection tool"
+git clone https://github.com/sqlmapproject/sqlmap /opt/sqlmap
+echo "*************************************************************"
+echo -e "\e[31mInstalling Recon-ng"
+echo -e "\e[31mA full-featured web reconnaissance framework written in Python"
+git clone https://bitbucket.org/LaNMaSteR53/recon-ng.git /opt/recon-ng
+echo "*************************************************************"
+echo -e "\e[31mInstalling Discover Scripts"
+echo -e "\e[31mCustom bash scripts used to automate various pentesting tasks."
+git clone https://github.com/leebaird/discover.git /opt/discover
+cd /opt/discover && ./setup.sh
+git clone https://bitbucket.org/LaNMaSteR53/recon-ng.git /opt/recon-ng
+echo "*************************************************************"
+echo -e "\e[31mInstalling BeEF Exploitation Framework"
+echo -e "\e[31mA cross-site scripting attack framework"
+cd /opt/
+wget https://raw.github.com/beefproject/beef/a6a7536e/install-beef
+chmod +x install-beef
+./install-beef
+echo "*************************************************************"
+echo -e "\e[31mInstalling Responder"
+echo -e "\e[31mA LLMNR, NBT-NS and MDNS poisoner, with built-in HTTP/SMB/MSSQL/FTP/LDAP rogue authentication server supporting NTLMv1/NTLMv2/LMv2," 
+echo -e "\e[31m Extended Security NTLMSSP and Basic HTTP authentication. Responder will be used to gain NTLM challenge/response hashes"
+git clone https://github.com/SpiderLabs/Responder.git /opt/Responder"
+echo "*************************************************************"
+echo -e "\e[31mInstalling The Hacker Playbook 2 - Custom Scripts"
+echo -e "\e[31mA number of custom scripts written by myself for The Hacker Playbook 2."
+git clone https://github.com/cheetz/Easy-P.git /opt/Easy-P
+git clone https://github.com/cheetz/Password_Plus_One /opt/Password_Plus_One
+git clone https://github.com/cheetz/PowerShell_Popup /opt/PowerShell_Popup
+git clone https://github.com/cheetz/icmpshock /opt/icmpshock
+git clone https://github.com/cheetz/brutescrape /opt/brutescrape
+git clone https://www.github.com/cheetz/reddit_xss /opt/reddit_xss
+echo "*************************************************************"
+echo -e "\e[31mInstalling PowerTools "
+echo -e "\e[31m PowerTools is a collection of PowerShell projects with a focus on offensive operations."
+git clone https://github.com/PowerShellEmpire/PowerTools.git
+echo "*************************************************************"
+echo -e "\e[31mInstalling PowerSploit (PowerShell)"
+echo -e "\e[31mPowerShell scripts for post exploitation"
+git clone https://github.com/mattifestation/PowerSploit.git /opt/PowerSploit
+cd /opt/PowerSploit && wget https://raw.githubusercontent.com/obscuresec/random/master/StartListener.py && wget https://raw.githubusercontent.com/darkoperator/powershell_scripts/master/ps_encoder.py
+echo "*************************************************************"
+echo -e "\e[31mInstalling nishang"
+echo -e "\e[31m Nishang - PowerShell for penetration testing and offensive security."
+git clone https://github.com/samratashok/nishang.git
+echo "*************************************************************"
+echo -e "\e[31mInstalling DSHashes"
+echo -e "\e[31mExtracts user hashes in a user-friendly format for NTDSXtract"
+wget http://ptscripts.googlecode.com/svn/trunk/dshashes.py -O /opt/NTDSXtract/dshashes.py
+echo "*************************************************************"
+echo -e "\e[31mInstalling SPARTA"
+echo -e "\e[31mA python GUI application which simplifies network infrastructure penetration testing" 
+echo -e "\e[31mby aiding the penetration tester in the scanning and enumeration phase."
+git clone https://github.com/secforce/sparta.git /opt/sparta
+apt-get install python-elixir
+apt-get install ldap-utils rwho rsh-client x11-apps finger
+echo "*************************************************************"
+echo -e "\e[31mInstalling NoSQLMap"
+echo -e "\e[31mA automated pentesting toolset for MongoDB database servers and web applications."
+git clone https://github.com/tcstool/NoSQLMap.git /opt/NoSQLMap
+echo "*************************************************************"
+echo -e "\e[31mInstalling Spiderfoot"
+echo -e "\e[31mOpen Source Footprinting Tool"
+mkdir /opt/spiderfoot/ && cd /opt/spiderfoot
+wget http://sourceforge.net/projects/spiderfoot/files/spiderfoot-2.3.0-src.tar.gz/download
+tar xzvf download
+pip install lxml
+pip install netaddr
+pip install M2Crypto
+pip install cherrypy
+pip install mako
+echo "*************************************************************"
+echo -e "\e[31mInstalling WCE"
+echo -e "\e[31mWindows Credential Editor (WCE) is used to pull passwords from memory"
+mkdir /opt/wce
+cd /opt/wce
+wget www.ampliasecurity.com/research/wce_v1_4beta_universal.zip
+unzip wce_v1* -d /opt/wce && rm wce_v1*.zip
+echo "*************************************************************"
+echo -e "\e[31mInstalling Mimikatz"
+echo -e "\e[31mUsed for pulling cleartext passwords from memory, Golden Ticket, skeleton key and more"
+echo -e "\e[31mGrab the newest release from https://github.com/gentilkiwi/mimikatz/releases/latest"
+cd /opt/ && wget http://blog.gentilkiwi.com/downloads/mimikatz_trunk.zip
+unzip -d ./mimikatz mimikatz_trunk.zip
+echo "*************************************************************"
+echo -e "\e[31mInstalling SET"
+echo -e "\e[31mSocial Engineering Toolkit (SET) will be used for the social engineering campaigns"
+git clone https://github.com/trustedsec/social-engineer-toolkit/ /opt/set/
+cd /opt/set && ./setup.py install
+echo "*************************************************************"
+echo -e "\e[31mInstalling Veil-Framework"
+echo -e "\e[31mA red team toolkit focused on evading detection. It currently contains Veil-Evasion for generating AV-evading payloads, Veil-Catapult for delivering them to targets,"
+echo -e "\e[31mand Veil-PowerView for gaining situational awareness on Windows domains. Veil will be used to create a python based Meterpreter executable."
+git clone https://github.com/Veil-Framework/Veil /opt/Veil
+cd /opt/Veil/ && ./Install.sh -c
+echo "*************************************************************"
+echo -e "\e[31mInstalling Fuzzing Lists (SecLists)"
+echo -e "\e[31mThese are scripts to use with Burp to fuzz parameters"
+git clone https://github.com/danielmiessler/SecLists.git /opt/SecLists
+echo "*************************************************************"
+echo -e "\e[31mInstalling Net-Creds Network Parsing"
+echo -e "\e[31mParse PCAP files for username/passwords"
+git clone https://github.com/DanMcInerney/net-creds.git /opt/net-creds
+echo "*************************************************************"
+echo -e "\e[31mInstalling Wifite"
+echo -e "\e[31mAttacks against WiFi networks"
+git clone https://github.com/derv82/wifite /opt/wifite
+echo "*************************************************************"
+echo -e "\e[31mInstalling WIFIPhisher"
+echo -e "\e[31mAutomated phishing attacks against WiFi networks"
+git clone https://github.com/sophron/wifiphisher.git /opt/wifiphisher
+echo "*************************************************************"
+echo -e "\e[31mInstalling Phishing-Frenzy"
+git clone https://github.com/pentestgeek/phishing-frenzy.git /var/www/phishing-frenzy
+echo -e "\e[31mInstalling Custom List of Extras"
+git clone https://github.com/macubergeek/gitlist.git /opt/gitlist
+
