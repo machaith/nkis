@@ -3,8 +3,10 @@
 clear
 echo "*************************************************************"
 echo -e "\e[34mCreated by machaith"
+echo -e "\e[0m"
 echo "https://github.com/machaith"
 echo -e "\e[31mthanks to Peter Kim - Cheetz - https://github.com/cheetz/"
+echo -e "\e[0m"
 echo "as I used his setup instructions and his great book The Hacker play Book 2"
 echo "as the main guide"
 echo "updating your machine"
@@ -72,7 +74,6 @@ git clone https://github.com/robertdavidgraham/masscan.git /opt/masscan
 cd /opt/masscan
 make
 make install
-echo -e "\e[32mDo not forget to change the hostname using "gedit /etc/hostname""
 echo -e "\e[0m"
 echo "*************************************************************"
 echo -e "\e[32mInstalling The Backdoor Factory"
@@ -179,13 +180,13 @@ echo "*************************************************************"
 echo -e "\e[31mInstalling BeEF Exploitation Framework"
 echo -e "\e[32mA cross-site scripting attack framework"
 echo -e "\e[0m"
-xterm -e "cd /opt/ && wget https://raw.github.com/beefproject/beef/a6a7536e/install-beef && chmod +x install-beef && ./install-beef
+xterm -e "cd /opt/ && wget https://raw.github.com/beefproject/beef/a6a7536e/install-beef && chmod +x install-beef && ./install-beef"
 echo "*************************************************************"
 echo -e "\e[31mInstalling Responder"
 echo -e "\e[32mA LLMNR, NBT-NS and MDNS poisoner, with built-in HTTP/SMB/MSSQL/FTP/LDAP rogue authentication server supporting NTLMv1/NTLMv2/LMv2," 
 echo -e "\e[32m Extended Security NTLMSSP and Basic HTTP authentication. Responder will be used to gain NTLM challenge/response hashes"
 echo -e "\e[0m"
-git clone https://github.com/SpiderLabs/Responder.git /opt/Responder"
+git clone https://github.com/SpiderLabs/Responder.git /opt/Responder
 echo "*************************************************************"
 echo -e "\e[31mInstalling The Hacker Playbook 2 - Custom Scripts"
 echo -e "\e[32mA number of custom scripts written by Peter Kim for The Hacker Playbook 2."
@@ -297,3 +298,5 @@ git clone https://github.com/pentestgeek/phishing-frenzy.git /var/www/phishing-f
 echo -e "\e[31mInstalling Custom List of Extras"
 echo -e "\e[0m"
 git clone https://github.com/macubergeek/gitlist.git /opt/gitlist
+echo -e "\e[32mDo not forget to change the hostname using "gedit /etc/hostname""
+echo "All Done"
