@@ -30,7 +30,7 @@ echo -e "\e[31mWCE"
 echo -e "\e[31mMimikatz"
 echo -e "\e[31mSET"
 echo -e "\e[31mVeil-Framework"
-echo -e "\e[31mFuzzing Lists (SecLists)"
+echo -e "\e[31mFuzzing Lists \(SecLists\)"
 echo -e "\e[31mNet-Creds Network Parsing "
 echo -e "\e[31mWifite"
 echo -e "\e[31mWIFIPhisher"
@@ -71,7 +71,7 @@ echo -e "\e[32mHTTPScreenshot is a tool for grabbing screenshots and HTML of lar
 pip install selenium
 git clone https://github.com/breenmachine/httpscreenshot.git /opt/httpscreenshot
 cd /opt/httpscreenshot
-echo -e "\e[34mIs this a 64 bit machine? (y/n)"
+echo -e "\e[34mIs this a 64 bit machine? \(y/n\)"
 read 64or32answer
 if [[ $64or32answer == "n" ]];then
 cd /root/Downloads/
@@ -94,7 +94,7 @@ echo -e "\e[93mSelect all defaults"
 echo -e "\e[93m./install.sh'
 echo -e "\e[93mSelect 4 to compile smbexec binaries"
 echo -e "\e[93mAfter compilation, select 5 to exit"
-xterm -e 'cd /opt/smbexec && ./install.sh'
+xterm -e "cd /opt/smbexec && ./install.sh"
 echo "*************************************************************"
 echo -e "\e[31mInstalling Gitrob"
 echo -e "\e[32mReconnaissance tool for GitHub organizations"
@@ -105,7 +105,7 @@ echo -e "\e[93mCopy the commands below to the new opened terminal and close the 
 echo -e "\e[93mcreateuser -s gitrob --pwprompt"
 echo -e "\e[93mcreatedb -O gitrob gitrob"
 echo -e "\e[93mexit"
-xterm -e 'su postgres'
+xterm -e "su postgres"
 echo "Done, continuing"
 cd /opt/gitrob/bin
 gem install gitrob
