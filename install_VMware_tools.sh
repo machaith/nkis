@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd ~
+cd
 apt-get install git gcc make linux-headers-$(uname -r)
 mkdir /root/vmware-tools
 cp -r /media/cdrom/* /root/vmware-tools/
@@ -11,4 +11,4 @@ cd vmware-tools-distrib
 clear
 echo "VMware tools installed"
 read -p "press Enter to start installing the tools"
-install_tools.sh
+echo "reboot and run install_tools.sh"
