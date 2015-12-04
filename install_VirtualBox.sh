@@ -6,6 +6,5 @@ cp /media/cdrom/VBoxLinuxAdditions.run /root/
 chmod 755 /root/VBoxLinuxAdditions.run
 /root/VBoxLinuxAdditions.run
 echo VBox guest Additions" installed"
-read -p "press Enter to start installing the tools"
-./install_tools.sh
+echo "reboot and run install_tools.sh"
 
