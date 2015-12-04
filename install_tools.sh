@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 cd
-echo The tools that will be installed"
+clear
+echo "The tools that will be installed"
 echo "*************************************************************"
 echo -e "\e[31mgedit"
 echo -e "\e[31mmasscan"
@@ -36,9 +37,10 @@ echo -e "\e[31mWifite"
 echo -e "\e[31mWIFIPhisher"
 echo -e "\e[31mPhishing"
 echo "*************************************************************"
+read -p "Press Enter to start installing the tools"
 
 echo -e "\e[31minstalling gedit"
-apt-get install geditins
+apt-get install gedit
 echo -e "\e[32mConfiguring postgresql database to autostart on boot"
 update-rc.d postgresql enable
 echo -e "\e[32minstalling additional tools"
@@ -91,7 +93,7 @@ cd /opt/smbexec
 echo -e "\e[93mCopy the commands below to the new opened terminal and close the new terminal when finished"
 echo -e "\e[93mSelect 1 - Debian/Ubuntu and derivatives"
 echo -e "\e[93mSelect all defaults"
-echo -e "\e[93m./install.sh'
+echo -e "\e[93m./install.sh"
 echo -e "\e[93mSelect 4 to compile smbexec binaries"
 echo -e "\e[93mAfter compilation, select 5 to exit"
 xterm -e "cd /opt/smbexec && ./install.sh"
@@ -111,7 +113,7 @@ cd /opt/gitrob/bin
 gem install gitrob
 echo "*************************************************************"
 echo -e "\e[31mInstalling CMSmap"
-echo -e "\e[32mCMSmap is a python open source CMS (Content Management System) scanner that automates the process of detecting security flaws"
+echo -e "\e[32mCMSmap is a python open source CMS \(Content Management System\) scanner that automates the process of detecting security flaws"
 git clone https://github.com/Dionach/CMSmap /opt/CMSmap
 echo "*************************************************************"
 echo -e "\e[31mInstalling WPScan"
@@ -245,4 +247,3 @@ echo -e "\e[31mInstalling Phishing-Frenzy"
 git clone https://github.com/pentestgeek/phishing-frenzy.git /var/www/phishing-frenzy
 echo -e "\e[31mInstalling Custom List of Extras"
 git clone https://github.com/macubergeek/gitlist.git /opt/gitlist
-
