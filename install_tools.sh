@@ -16,6 +16,8 @@ echo "*************************************************************"
 echo "The tools that will be installed"
 echo "*************************************************************"
 echo -e "\e[31mgedit"
+echo -e "\e[31mlibreoffice"
+echo -e "\e[31mark"
 echo -e "\e[31mmasscan"
 echo -e "\e[31mThe Backdoor Factory"
 echo -e "\e[31mHTTPScreenShot"
@@ -54,6 +56,12 @@ cd
 echo -e "\e[31minstalling gedit"
 echo -e "\e[0m"
 apt-get install gedit
+echo -e "\e[31minstalling libreoffice"
+echo -e "\e[0m"
+apt-get install libreoffice
+echo -e "\e[31minstalling ark"
+echo -e "\e[0m"
+apt-get install ark
 echo -e "\e[32mConfiguring postgresql database to autostart on boot"
 echo -e "\e[0m"
 update-rc.d postgresql enable
@@ -135,6 +143,7 @@ echo -e "\e[93mcreatedb -O gitrob gitrob"
 echo -e "\e[93mexit"
 xterm -e "su postgres"
 echo "Done, continuing"
+echo "Done, running gem install gitrob will take some time with no output"
 echo -e "\e[0m"
 cd /opt/gitrob/bin
 gem install gitrob
