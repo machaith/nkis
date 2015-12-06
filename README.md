@@ -15,36 +15,69 @@ any comments or recommended editions or modification are welcome :)
 Tools included
 
 gedit
+
 libreoffice
+
 ark
+
 masscan
+
 The Backdoor Factory
+
 HTTPScreenShot
+
 SMBExec
+
 Gitrob
+
 CMSmap
+
 WPScan
+
 Eyewitness
+
 Printer Exploits
+
 SQLMap
+
 Recon-ng
+
 Discover Scripts
+
 BeEF Exploitation Framework
+
 Responder
+
 The Hacker Playbook 2 - Custom Scripts
+
 PowerSploit
+
 PowerTools
+
 nishang
+
 DSHashes
+
 SPARTA
+
 NoSQLMap
+
 Spiderfoot
+
 WCE
+
 Mimikatz
+
 SET
+
 Veil-Framework
+
 Fuzzing Lists -SecLists
+
 Net-Creds Network Parsing 
+
 Wifite
+
 WIFIPhisher
+
 Phishing
